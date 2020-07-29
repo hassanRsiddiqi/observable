@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <title>Observable</title>
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link
+      async
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.css"
+      type="text/css"
+      media="screen"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <section style="text-align: center;">
+        <img
+          style="width: 70px; margin-top: 250px; text-align: center;"
+          src="/images/loaders/loader.gif"
+          alt="Please wait..."
+        />
+      </section>
+    </div>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function (event) {
+        // - Code to execute when all DOM content is loaded.
+        // - including fonts, images, etc.
+        //  get react html body height (which is in app div)
+        let body = document.getElementById("app");
+        let body_height = Math.max(
+          body.scrollHeight,
+          body.offsetHeight,
+          body.clientHeight
+        );
+        //  get user's screen height
+        let window_height = window.innerHeight;
+        if (body_height < window_height) {
+          /*                    //  change app body height to screen height
+                    body.style.minHeight = '100%';
+                    //  make footer sit at bottom
+                    let footer = document.getElementsByTagName("footer")[0];
+                    footer.classList.add("footer-bottom");*/
+        }
+      });
+    </script>
+  </body>
+</html>
